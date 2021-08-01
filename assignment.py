@@ -28,3 +28,4 @@ for i in ans:
     i = i.strip()
     print(i)
     
+driver.quit()
