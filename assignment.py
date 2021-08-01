@@ -10,12 +10,14 @@ driver.get(URL)
 
 required = ['left' , 'middle' , 'right' , 'bottom']
 links = []
+ans = []
+
 for request in driver.requests:
     if request.response:
         if request.url.split('_')[-1] in required:
             links.append(request.url)
 
-ans = []            
+            
 for i in range(len(links)):
     driver.get(links[i])
     data = BeautifulSoup(driver.page_source)
